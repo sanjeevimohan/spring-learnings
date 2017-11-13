@@ -44,4 +44,5 @@ dependencies {
     compile("io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry")
     compile("io.pivotal.spring.cloud:spring-cloud-services-starter-circuit-breaker")
     compile("com.h2database:h2")
+    compile("org.springframework.amqp:spring-rabbit:1.6.6.RELEASE")
 }

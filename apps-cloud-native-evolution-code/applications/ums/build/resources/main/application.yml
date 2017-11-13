@@ -7,3 +7,4 @@ spring:
 security:
   basic:
     enabled: false
+billingQueueName: billing-queue
