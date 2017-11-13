@@ -26,6 +26,13 @@ cf create-service p-circuit-breaker-dashboard standard circuit-breaker-dashboard
 cf bind-service ums circuit-breaker-dashboard
 cf bind-service billing circuit-breaker-dashboard
 
+cf bind-service ums config-server
+cf bind-service billing config-server
+
+cf create-service p-rabbitmq standard rabbitmq
+cf bind-service ums rabbitmq
+cf bind-service billing rabbitmq
+
 cf delete-orphaned-routes
 
 cf scale ums -m 1G
@@ -68,13 +75,12 @@ spring.application.name=billing
 # PORT
 8761	Eureka
 8888 Config Server
-
+15672 RabbitMQ Dashboard
+5672 RabbitMQ
 
 
 ./gradlew submitCloudNativeEvolutionServiceDiscovery -PumsUrl=http://ums-intermarine-ductility.apps.cumuluslabs.io
-./gradlew submitCloudNativeEvolutionServiceDiscovery -PumsUrl=http://ums-intermarine-ductility.apps.cumuluslabs.io
-billing-attritive-dal.apps.cumuluslabs.io
+./gradlew submitCloudNativeEvolutionDistributedConfiguration -PumsUrl=http://ums-intermarine-ductility.apps.cumuluslabs.io  -Pusername=user -Ppassword=110fba1a0-dfb6-42d5-830f-8bb961769fc7
+./gradlew submitCloudNativeEvolutionSubscriptions -PumsUrl=http://ums-intermarine-ductility.apps.cumuluslabs.io  -Pusername=user -Ppassword=110fba1a0-dfb6-42d5-830f-8bb961769fc7
 
-
-
-ums-intermarine-ductility.apps.cumuluslabs.io
+billing-attritive-dal
