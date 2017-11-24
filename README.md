@@ -541,3 +541,59 @@ curl -X POST http://moviefun-unsyllabicated-jade.apps.cumuluslabs.io/rabbit -d
 
 
 PWD present working directory,
+
+stocks queue
+10.0.16.95
+7a43202e-d29a-42b9-9fc1-1810563585fe
+8l8kf4gc3q84r5147jbloh60sm
+
+cf ssh -L 63306:10.0.16.78:3306 album-service-sm
+mysql -u zOyeISUSDDFuiEQ3 -h 0 -p -D cf_4df0b79e_9c31_4f03_bad4_c3fb39c1813f -P 63306
+v6hxh3OovcSOuQiK
+
+
+cf ssh -L 63306:10.0.16.78:3306 movie-service-sm
+mysql -u 8FtzbndSzbQc7rWL -h 0 -p -D cf_62974901_9947_4767_b69a_954aba77fda1 -P 63306
+m9COmacQO59MDokl
+
+https://cognizant-pal-v4.apps.cumuluslabs.io/
+https://github.com/platform-acceleration-lab/prerequisite-code#readme
+https://apps.system.cumuluslabs.io
+https://docs.cloudfoundry.org/devguide/deploy-apps/blue-green.html
+https://github.com/pivotalservices/concourse-pipeline-samples/tree/master/blue-green-app-deployment
+https://docs.spring.io/spring-boot/docs/current/reference/html/production-ready-metrics.html
+http://www.baeldung.com/spring-boot-actuators
+https://www.dineshonjava.com/spring-boot-actuator-complete-guide/
+http://projects.spring.io/spring-security-oauth/docs/oauth2.html
+http://www.baeldung.com/spring-security-authentication-with-a-database
+https://docs.spring.io/spring/docs/current/spring-framework-reference/testing.html
+http://www.baeldung.com/spring-boot-testing
+http://www.baeldung.com/spring-cloud-configuration
+http://docs.pivotal.io/spring-cloud-services/1-4/common/service-registry/managing-service-instances.html
+https://gooroo.io/GoorooTHINK/Article/17367/Spring-Cloud-and-Netflix-Ribbon-Clientside-Load-Balancing/28985#.WgHtFcgjHIU
+https://cloud.spring.io/spring-cloud-netflix/single/spring-cloud-netflix.html#netflix-ribbon-starter
+https://spring.io/guides/gs/client-side-load-balancing/
+http://www.baeldung.com/spring-cloud-rest-client-with-netflix-ribbon
+https://dst.cognizant.com/Oct-2017-digest.html
+https://docs.pivotal.io/pivotalcf/1-12/devguide/services/using-vol-services.html
+https://mac.eltima.com/amazon-mac.html
+http://docs.aws.amazon.com/cli/latest/userguide/cli-install-macos.html#awscli-install-osx-path
+https://github.com/TheCognizantFoundry/apps-movie-fun-code.git
+https://www.danrodney.com/mac/
+
+https://basic-sso.login.system.cumuluslabs.io/login.do
+
+
+{"ticker":"INTC","quantity":1,"price":null,"orderType":"MARKET","accountName":"ACCT-123","buyRequest":true,"userName":"Joe","requestId":"REQ-1","id":"c1a60c02-e711-4f40-ba84-643d99c6fb44"}
+
+
+
+{"ticker":"AAPL","quantity":1,"price":null,"orderType":"MARKET","confirmationNumber":null,"error":false,"errorMessage":null,"accountName":"ACCT-123","timestamp":1511501012639,"requestId":"REQ-1"}
+
+
+mvn -N io.takari:maven:wrapper
+git checkout -b concourse_deployment
+git push -u origin concourse_deployment
+
+chmod -x /usr/local/bin/fly
+fly -t cicd login --concourse-url http://IP:8080/
